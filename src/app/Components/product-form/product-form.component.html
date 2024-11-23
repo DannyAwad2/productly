@@ -1,0 +1,115 @@
+<h6 class="mb-3">Create a new product</h6>
+<div class="border p-2 rounded">
+  <form [formGroup]="productForm" (ngSubmit)="handleSubmit()">
+    <div class="row">
+      <div class="col">
+        <div class="mb-3">
+          <label for="productName" class="form-label"
+            >Product Name
+            <span class="text-danger font-weight-blod">*</span></label
+          >
+          <input
+            formControlName="name"
+            type="text"
+            class="form-control form-control-sm"
+            id="productName"
+            [ngClass]="{
+              'is-invalid':
+                getFeild('name')?.invalid && getFeild('name')?.touched
+            }"
+          />
+          @if (getFeild('name')?.invalid && getFeild('name')?.touched) {
+          <small class="text-danger"> This feild is required. </small>
+          }
+        </div>
+      </div>
+      <div class="col">
+        <div class="mb-3">
+          <label for="productPrice" class="form-label"
+            >Product Price
+            <span class="text-danger font-weight-blod">*</span></label
+          >
+          <input
+            formControlName="price"
+            type="number"
+            class="form-control form-control-sm"
+            id="productPrice"
+            [ngClass]="{
+              'is-invalid':
+                getFeild('price')?.invalid && getFeild('price')?.touched
+            }"
+          />
+          @if (getFeild('peice')?.invalid && getFeild('peice')?.touched) {
+          <small class="text-danger"> This feild is required. </small>
+          }
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="mb-3">
+          <label class="form-lable" for="productCategory"
+            >Product Category<span class="text-danger font-weight-blod"
+              >*</span
+            ></label
+          >
+          <select
+            formControlName="category"
+            class="form-select form-select-sm"
+            name="category"
+            id="productCategory"
+            [ngClass]="{
+              'is-invalid':
+                getFeild('category')?.invalid && getFeild('category')?.touched
+            }"
+          >
+            <option value="type1">Type (1)</option>
+            <option value="type1">Type (2)</option>
+            <option value="type1">Type (1)</option>
+            <option value="type1">Type (1)</option>
+            <option value="type1">Type (1)</option>
+          </select>
+          @if (getFeild('category')?.invalid && getFeild('category')?.touched) {
+          <small class="text-danger"> This feild is required. </small>
+          }
+        </div>
+      </div>
+      <div class="col">
+        <div class="mb-3">
+          <label for="features" class="form-label">Product features</label>
+          <input
+            formControlName="features"
+            type="txet"
+            class="form-control form-control-sm"
+            id="features"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="productDescription" class="form-label"
+        >Description<span class="text-danger font-weight-blod">*</span></label
+      >
+      <textarea
+        [ngClass]="{
+          'is-invalid':
+            getFeild('description')?.invalid && getFeild('description')?.touched
+        }"
+        formControlName="description"
+        class="form-control form-control-sm"
+        id="productDescription"
+        rows="5"
+      ></textarea>
+      @if (getFeild('description')?.invalid && getFeild('description')?.touched)
+      {
+      <small class="text-danger"> This feild is required. </small>
+      }
+    </div>
+    @if(status === 'update'){<button type="submit" class="btn btn-warning me-1">
+      Update</button
+    >} @else {
+    <button type="submit" class="btn btn-primary me-1">Create</button>
+    }
+    <button type="reset" class="btn btn-secondary">Reset</button>
+  </form>
+</div>

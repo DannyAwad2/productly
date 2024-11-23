@@ -1,142 +1,16 @@
-<div class="container">
-  <header
-    class="d-flex flex-wrap justify-content-center py-3 mb-4 mb-md-0 border-bottom"
-  >
-    <a
-      href="/"
-      class="d-flex align-items-center mb-3 mb-md-0 me-auto link-body-emphasis text-decoration-none"
-    >
-      <h2>Productly</h2>
-    </a>
+<app-navbar></app-navbar>
 
-    <div><button class="btn btn-danger">Logout</button></div>
-  </header>
-</div>
-
-<div class="container">
+<div class="container h-100">
   <div class="row mt-3">
     <div class="col">
-      <h4>Manage Your Products</h4>
+      <h5>Manage Your Products</h5>
       <hr />
       <div class="row">
         <div class="col-lg mb-4">
-          <h5 class="mb-3">Create a new product</h5>
-          <div class="border p-2 rounded">
-            <form>
-              <div class="mb-3">
-                <label for="productName" class="form-label">Product Name</label>
-                <input
-                  formControlName="name"
-                  type="text"
-                  class="form-control"
-                  id="productName"
-                />
-                <div id="emailHelp" class="form-text">
-                  We'll never share your email with anyone else.
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="productPrice" class="form-label"
-                  >Product Price</label
-                >
-                <input
-                  formControlName="email"
-                  type="number"
-                  class="form-control"
-                  id="productPrice"
-                />
-                <div id="emailHelp" class="form-text">
-                  We'll never share your email with anyone else.
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="features" class="form-label"
-                  >Product features</label
-                >
-                <input
-                  formControlName="features"
-                  type="txet"
-                  class="form-control"
-                  id="features"
-                />
-                <div id="emailHelp" class="form-text">
-                  We'll never share your email with anyone else.
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="productDescription" class="form-label"
-                  >Description</label
-                >
-                <textarea
-                  formControlName="email"
-                  class="form-control"
-                  id="productDescription"
-                  rows="5"
-                ></textarea>
-                <div id="emailHelp" class="form-text">
-                  We'll never share your email with anyone else.
-                </div>
-              </div>
-              <button type="submit" class="btn btn-warning me-1">Update</button>
-              <button type="submit" class="btn btn-primary me-1">Create</button>
-              <button type="submit" class="btn btn-secondary">Reset</button>
-            </form>
-          </div>
+          <app-product-form></app-product-form>
         </div>
         <div class="col-lg">
-          <h5 class="mb-3">Products list</h5>
-          <table class="table table-striped table-hover">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Price</th>
-                <th scope="col">Created</th>
-                <th scope="col">Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Phone</td>
-                <td>2,500</td>
-                <td>21 Dec</td>
-                <td><button class="btn btn-danger">Delete</button></td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Tablet</td>
-                <td>4,250</td>
-                <td>18 Nov</td>
-                <td><button class="btn btn-danger">Delete</button></td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Laptop</td>
-                <td>5,250</td>
-                <td>28 Jan</td>
-                <td><button class="btn btn-danger">Delete</button></td>
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-                <td>TV</td>
-                <td>2,600</td>
-                <td>20 Oct</td>
-                <td><button class="btn btn-danger">Delete</button></td>
-              </tr>
-            </tbody>
-          </table>
-          <nav aria-label="Page navigation example  text-align-center">
-            <ul class="pagination">
-              <li class="page-item">
-                <a class="page-link" href="#">Previous</a>
-              </li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item"><a class="page-link" href="#">Next</a></li>
-            </ul>
-          </nav>
+          <app-products-list></app-products-list>
         </div>
       </div>
     </div>
