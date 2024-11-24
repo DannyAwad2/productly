@@ -1,0 +1,86 @@
+{
+  "products": [
+    {
+      "id": 0,
+      "name": "hero Product",
+      "category": "cat 1",
+      "detail": "Lorem ipsum dolor sit amet",
+      "price": "99",
+      "image": "http://placehold.it/940x300/999/CCC"
+    },
+    {
+      "id": 1,
+      "name": "Product 1",
+      "category": "cat 1",
+      "detail": "Lorem ipsum dolor sit amet",
+      "price": "99",
+      "image": "http://placehold.it/300x300/999/CCC"
+    },
+    {
+      "id": 2,
+      "name": "Product 2",
+      "category": "cat 1",
+      "detail": "Lorem ipsum dolor sit amet",
+      "price": "99",
+      "image": "http://placehold.it/300x300/999/CCC"
+    },
+    {
+      "id": 3,
+      "name": "Product 3",
+      "category": "cat 1",
+      "detail": "Lorem ipsum dolor sit amet",
+      "price": "99",
+      "image": "http://placehold.it/300x300/999/CCC"
+    },
+    {
+      "id": 4,
+      "name": "Product 4",
+      "category": "cat 1",
+      "detail": "Lorem ipsum dolor sit amet",
+      "price": "99",
+      "image": "http://placehold.it/300x300/999/CCC"
+    },
+    {
+      "id": 0,
+      "name": "Product 5",
+      "category": "cat 1",
+      "detail": "Lorem ipsum dolor sit amet",
+      "price": "99",
+      "image": "http://placehold.it/300x300/999/CCC"
+    },
+    {
+      "id": 5,
+      "name": "Product 6",
+      "category": "cat 1",
+      "detail": "Lorem ipsum dolor sit amet",
+      "price": "99",
+      "image": "http://placehold.it/300x300/999/CCC"
+    },
+    {
+      "id": 6,
+      "name": "Phone",
+      "category": "type1",
+      "detail": "http://via.placeholder.com/300x300/999/CCC\nhttp://via.placeholder.com/300x300/999/CCC ",
+      "image": "http://via.placeholder.com/300x300/999/CCC",
+      "price": 2500
+    }
+  ],
+  "category": [
+    {
+      "id": 0,
+      "name": "Type (1)"
+    },
+    {
+      "id": 1,
+      "name": "Type (2)"
+    },
+    {
+      "id": 2,
+      "name": "Type (3)"
+    },
+    {
+      "id": 3,
+      "name": "Type (4)"
+    }
+  ]
+}

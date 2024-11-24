@@ -5,8 +5,9 @@
       <div class="col">
         <div class="mb-3">
           <label for="productName" class="form-label"
-            >Product Name
-            <span class="text-danger font-weight-blod">*</span></label
+            >Product Name<span class="text-danger font-weight-blod"
+              >*</span
+            ></label
           >
           <input
             formControlName="name"
@@ -26,8 +27,9 @@
       <div class="col">
         <div class="mb-3">
           <label for="productPrice" class="form-label"
-            >Product Price
-            <span class="text-danger font-weight-blod">*</span></label
+            >Product Price<span class="text-danger font-weight-blod"
+              >*</span
+            ></label
           >
           <input
             formControlName="price"
@@ -76,40 +78,60 @@
       </div>
       <div class="col">
         <div class="mb-3">
-          <label for="features" class="form-label">Product features</label>
+          <label for="formFile" class="form-label"
+            >Product Image Url<span class="text-danger">*</span></label
+          >
           <input
-            formControlName="features"
-            type="txet"
+            formControlName="image"
+            type="url"
+            placeholder="http://placehold.it/300x300/999/CCC"
             class="form-control form-control-sm"
-            id="features"
+            id="productImage"
+            [ngClass]="{
+              'is-invalid':
+                getFeild('image')?.invalid && getFeild('image')?.touched
+            }"
           />
+          @if (getFeild('image')?.invalid && getFeild('image')?.touched) {
+          <small class="text-danger"> This feild is required. </small>
+          }
         </div>
       </div>
     </div>
-    <div class="mb-3">
-      <label for="productDescription" class="form-label"
-        >Description<span class="text-danger font-weight-blod">*</span></label
-      >
-      <textarea
-        [ngClass]="{
-          'is-invalid':
-            getFeild('description')?.invalid && getFeild('description')?.touched
-        }"
-        formControlName="description"
-        class="form-control form-control-sm"
-        id="productDescription"
-        rows="5"
-      ></textarea>
-      @if (getFeild('description')?.invalid && getFeild('description')?.touched)
-      {
-      <small class="text-danger"> This feild is required. </small>
-      }
+    <div class="row">
+      <div class="col">
+        <div class="mb-3">
+          <label for="productDetails" class="form-label"
+            >Details<span class="text-danger font-weight-blod">*</span></label
+          >
+          <textarea
+            [ngClass]="{
+              'is-invalid':
+                getFeild('details')?.invalid && getFeild('details')?.touched
+            }"
+            formControlName="details"
+            class="form-control form-control-sm"
+            id="productDetails"
+            rows="4"
+          ></textarea>
+          @if (getFeild('details')?.invalid && getFeild('details')?.touched) {
+          <small class="text-danger"> This feild is required. </small>
+          }
+        </div>
+      </div>
     </div>
-    @if(status === 'update'){<button type="submit" class="btn btn-warning me-1">
-      Update</button
-    >} @else {
-    <button type="submit" class="btn btn-primary me-1">Create</button>
-    }
-    <button type="reset" class="btn btn-secondary">Reset</button>
+    <div class="row">
+      <div class="col">
+        @if(status === 'update'){<button
+          type="submit"
+          class="btn btn-warning me-1"
+        >
+          Update</button
+        >} @else {
+        <button type="submit" class="btn btn-primary me-1">Create</button>
+        }
+        <button type="reset" class="btn btn-secondary">Reset</button>
+      </div>
+    </div>
   </form>
 </div>
